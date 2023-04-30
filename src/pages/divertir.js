@@ -4,10 +4,9 @@ import { Inter } from "next/font/google";
 import { Sigmar } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
-import ImageLY from "./assets/LY.png";
-import Heart from "./assets/heart.svg";
+import Heart from "../assets/heart.svg";
 
-import BaseListBox from "./assets/listbox/listbox";
+import BaseListBox from "../assets/listbox/listbox";
 
 const sigmar = Sigmar({
   weight: "400",
