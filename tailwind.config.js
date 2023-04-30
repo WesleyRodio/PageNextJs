@@ -11,7 +11,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      }/* ,
       animation: {
         balancar: 'balancar 1s ease-in-out infinite',
       },
@@ -20,7 +20,7 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
-      }
+      } */
     },
     
   },

@@ -1,17 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Inter } from "next/font/google";
-import { Sigmar } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 import Heart from "../assets/heart.svg";
 
 import BaseListBox from "../assets/listbox/listbox";
-
-const sigmar = Sigmar({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export default function Divertir() {
   const options1 = [
@@ -96,7 +90,7 @@ export default function Divertir() {
               <div className="flex flex-row justify-around mt-14">
                 <div>
                   <button
-                    className={` tracking-widest bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full w-32 h-16 ${sigmar.className}`}
+                    className={` tracking-widest bg-rose-500 hover:bg-rose-700 text-white font-bold py-2 px-4 rounded-full w-32 h-16`}
                   >
                     Sortear
                   </button>
@@ -115,10 +109,7 @@ export default function Divertir() {
       </section>
       <footer>
         <div>
-          <span className={` text-4xl ${sigmar.className} flex justify-center`}>
-            {" "}
-            I and You
-          </span>
+          <span className={` text-4xl flex justify-center`}> I and You</span>
         </div>
       </footer>
       <style></style>
