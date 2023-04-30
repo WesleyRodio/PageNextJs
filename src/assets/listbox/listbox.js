@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Listbox, Transition } from "@headlessui/react";
 
 export default function MyListbox({
@@ -6,9 +6,6 @@ export default function MyListbox({
   selectedValue,
   setSelectedValue,
 }) {
-    console.log(options,
-        selectedValue,
-        setSelectedValue)
   return (
     <Listbox value={selectedValue} onChange={setSelectedValue}>
       <Listbox.Button className="text-black text-center bg-white border border-black-300 rounded-md w-[100%] py-1 pr-3 mb-2 shadow-sm">
@@ -27,7 +24,7 @@ export default function MyListbox({
             <Listbox.Option
               key={person.id}
               value={person}
-              className="text-black text-center bg-white w-52 py-1 pr-3 hover:bg-rose-700 hover:text-white"
+              className="text-black text-center bg-dark w-52 py-1 pr-3 hover:bg-rose-700 hover:text-white"
             >
               {person.name}
             </Listbox.Option>
