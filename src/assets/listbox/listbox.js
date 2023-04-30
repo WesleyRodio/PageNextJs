@@ -8,7 +8,7 @@ export default function MyListbox({
 }) {
   return (
     <Listbox value={selectedValue} onChange={setSelectedValue}>
-      <Listbox.Button className="text-black text-center bg-white border border-black-300 rounded-md w-[100%] py-1 pr-3 mb-2 shadow-sm">
+      <Listbox.Button className="text-black text-center bg-white border border-black-300 rounded-md w-[100%] py-1 pr-3 mb-1 shadow-sm">
         {selectedValue.name}
       </Listbox.Button>
       <Transition
@@ -19,7 +19,7 @@ export default function MyListbox({
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Listbox.Options className="absolute overflow-auto z-10 rounded-md scroll-m-0">
+        <Listbox.Options className="absolute overflow-auto z-10 rounded-md scroll-m-0 bg-white">
           {options.map((person) => (
             <Listbox.Option
               key={person.id}

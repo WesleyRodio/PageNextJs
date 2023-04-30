@@ -37,8 +37,8 @@ export default function Divertir() {
   const [selectedOption4, setSelectedOption4] = useState(options4[0]);
 
   return (
-    <main className="overflow-x-hidden overflow-y-hidden">
-      <header className="flex flex-row justify-center items-center max-w-full h-20 drop-shadow-md">
+    <main className="">
+      <header className="text-black text-center bg-white border border-black-300 rounded-md shadow-sm flex flex-row justify-center items-center max-w-full h-20 drop-shadow-md">
         <div className="menu w-full flex justify-evenly">
           <a href="/divertir">Dançar</a>
           <a href="/divertir">Passear</a>
@@ -112,7 +112,9 @@ export default function Divertir() {
           <span className={` text-4xl flex justify-center`}> I and You</span>
         </div>
       </footer>
-      <style></style>
+      <input type="hidden" className="text-black text-center bg-white border border-black-300 rounded-md w-[100%] py-1 pr-3 mb-2 shadow-sm"/>
+      <input type="hidden" className="text-black text-center bg-dark w-52 py-1 pr-3 hover:bg-rose-700 hover:text-white"/>
+      <input type="hidden" className="absolute overflow-auto z-10 rounded-md scroll-m-0 bg-white"/>
     </main>
   );
 }
