@@ -5,9 +5,9 @@ export default function Document() {
     <Html lang="pt-br">
       <Head />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <body className="min-h-[100%] h-full">
+      <body className="">
         <Main />
-        <NextScript />
+        <NextScript className="h-full" />
       </body>
     </Html>
   )

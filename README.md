@@ -36,3 +36,55 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Anotações
+
+Enviar valores para a api;
+
+```javascript
+import { useEffect } from "react";
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const data = new createData();
+
+  const res = await fetch("/api/5555", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await res.json();
+  console.log(result);
+};
+```
+
+Receber valores da api
+
+```javascript
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3000/api/5555");
+  const data = await res.json();
+
+  return { props: { data } };
+}
+```
+
+Criar rotas com id's diferentes
+
+```javascript
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          id: "5555",
+        },
+      },
+    ],
+    fallback: false,
+  };
+}
+```
